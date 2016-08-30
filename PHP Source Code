@@ -1,0 +1,11 @@
+This source demonstrate PHP setup on Raspi.
+Use a simple example to power up LED via computer.
+
+Source: http://www.raspberry-pi-geek.com/Archive/2014/07/PHP-on-Raspberry-Pi
+Reminder: Place the PHP code under var/www/html in Raspi.
+------------------------------------------------------------------------------
+This souce demonstrate how to setup i2c in Raspi.
+By enter i2cdetect -y 1 in terminal, you should be able to see a table list of i2c address that is connected.
+
+Souce: http://skpang.co.uk/blog/archives/575
+------------------------------------------------------------------------------
