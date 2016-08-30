@@ -5,7 +5,22 @@ Source: http://www.raspberry-pi-geek.com/Archive/2014/07/PHP-on-Raspberry-Pi
 Reminder: Place the PHP code under var/www/html in Raspi.
 ------------------------------------------------------------------------------
 This souce demonstrate how to setup i2c in Raspi.
-By enter i2cdetect -y 1 in terminal, you should be able to see a table list of i2c address that is connected.
+By enter "i2cdetect -y 1" in terminal, you should be able to see a table list of i2c address that is connected.
+
 
 Souce: http://skpang.co.uk/blog/archives/575
 ------------------------------------------------------------------------------
+Testing Code in Terminal 
+"i2cset -y 1 0x0a 0x31"
+
+Which:
+i2set - program
+-y optoin
+0 i2c bus to use  (Raspi 3 have i2c BUS 1)
+0x50 I2C address of EEPROM (My Uno set to address DEC 10, which is HEX 0x0a in asci table)
+0x00 0x00 TWO datatbytes which become the 16bit EEPROM INTERNAL data pointer (data, in which i am sending CHAR 1 which is HEX 0x31)
+0x01 etc actual data to write to sequential locations STARTing at the data pointer
+
+reference: https://www.raspberrypi.org/forums/viewtopic.php?f=44&t=19398
+ascii table: http://web.cs.mun.ca/~michael/c/ascii-table.html
+
